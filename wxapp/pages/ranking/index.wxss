@@ -1,0 +1,68 @@
+._bg {
+	width: 100%;
+}
+
+page {
+	background: white;
+}
+
+._shadow-blur::before {
+	content: "";
+	display: block;
+	background: inherit;
+	filter: blur(10rpx);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 10rpx;
+	z-index: -1;
+	opacity: 0.4;
+	transform-origin: 0 0;
+	border-radius: inherit;
+	transform: scale(1, 1);
+}
+
+._shadow-blur {
+	position: relative;
+}
+
+.list {
+	min-height: 150rpx;
+}
+
+.list ._ranking {
+	width: 80rpx;
+}
+
+.list ._icon {
+	width: 80rpx;
+}
+
+.list ._num {
+	color: var(--grey);
+	font-size: 35rpx;
+	background: rgba(0, 0, 0, .03);
+	line-height: 60rpx;
+	width: 60rpx;
+	height: 60rpx;
+	text-align: center;
+}
+
+.list ._img {
+	width: 160rpx;
+	height: 120rpx;
+}
+
+.list ._title {
+	display: -webkit-box;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	letter-spacing: 1px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.list ._content{
+	min-height: 150rpx;
+}

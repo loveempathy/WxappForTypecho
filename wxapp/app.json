@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/ranking/index",
+        "pages/user/index",
+        "pages/detail/index"
+    ],
+    "window": {
+        "navigationStyle": "custom"
+    },
+    "usingComponents": {
+        "cu-custom": "/colorui/components/cu-custom"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#d6dce2",
+        "selectedColor": "#0081ff",
+        "borderStyle": "white",
+        "list": [
+            {
+                "text": "主页",
+                "pagePath": "pages/index/index",
+                "iconPath": "static/images/home.png",
+                "selectedIconPath": "static/images/home_s.png"
+            },
+            {
+                "text": "排行",
+                "pagePath": "pages/ranking/index",
+                "iconPath": "static/images/ranking.png",
+                "selectedIconPath": "static/images/ranking_s.png"
+            },
+            {
+                "text": "关于",
+                "pagePath": "pages/user/index",
+                "iconPath": "static/images/about.png",
+                "selectedIconPath": "static/images/about_s.png"
+            }
+        ],
+        "backgroundColor": "#FFFFFF"
+    }
+}

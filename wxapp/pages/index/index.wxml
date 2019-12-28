@@ -1,0 +1,55 @@
+<view id="top">
+	<cu-custom tspy='{{false}}' opacity='{{opacity}}' isNav='{{topNav}}' mClass='bg-blue shadow-blur'>
+		<view slot='content' wx:if='{{!topNav}}'>LoveEmpathy</view>
+		<view slot='nav' wx:else>
+			<scroll-view id="class" scroll-x class="nav" scroll-with-animation scroll-left="{{scrollLeft}}" style="width: {{scroll_width}}px;">
+				<view class="cu-item {{index==TabCur?'text-white':'text-sm'}} " style="height: 80rpx;color:{{index==TabCur?'#FFF':'rgba(255,255,255,.7)'}};"
+				 wx:for="{{class}}" wx:key bindtap="tabSelect" data-id='{{item.mid}}' data-index="{{index}}">
+					<view class="flex flex-direction align-center">
+						<view style="height: 68rpx;">{{item.name}}</view>
+						<view class="bg-white round" style="width: 40rpx;height: 4rpx;" wx:if='{{index==TabCur}}' />
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+	</cu-custom>
+
+	<swiper class="banner screen-swiper square-dot" indicator-dots circular autoplay interval="5000" duration="500">
+		<swiper-item wx:for='{{4}}' wx:key>
+			<image id="img" src="{{resource_url}}blog_banner{{index+1}}.jpg" mode="widthFix"></image>
+		</swiper-item>
+	</swiper>
+</view>
+
+<scroll-view id="class" scroll-x class="nav bg-white shadow" scroll-with-animation scroll-left="{{scrollLeft}}">
+	<view class="cu-item {{index==TabCur?'text-blue cur':'text-sm'}}" style="color:{{index==TabCur?'#0081ff':'rgba(0,129,255,.9)'}};"
+	 wx:for="{{class}}" wx:key bindtap="tabSelect" data-id='{{item.mid}}' data-index="{{index}}">
+		{{item.name}}
+	</view>
+</scroll-view>
+
+<view class="padding-lr-xl">
+	<block wx:for='{{list}}' wx:key>
+		<view bindtap='toPage' data-id='{{item.cid}}' class="text-white margin-tb bg-img bg-mask padding-xl radius shadow-blur flex flex-direction align-center" style="background-image: url('{{item.thumb[0].str_value}}');min-height: 200rpx;">
+			<view class="text-center">{{item.title}}</view>
+			<view class="flex align-center justify-between padding-top text-sm" style="min-width: 400rpx;">
+				<view class="cuIcon-time padding-xs">
+					<text class="padding-left-xs">{{item.created}}天前</text>
+				</view>
+				<view class="cuIcon-message  padding-xs">
+					<text class="padding-left-xs">{{item.commentsNum}}</text>
+				</view>
+				<view class="cuIcon-attention  padding-xs">
+					<text class="padding-left-xs">{{item.views}}</text>
+				</view>
+				<view class="cuIcon-like  padding-xs">
+					<text class="padding-left-xs">{{item.likes}}</text>
+				</view>
+			</view>
+		</view>
+	</block>
+</view>
+
+<view class="round floating bg-grey {{animation?'animation':'shadow'}}" style="background-color: #50656e;" bindtap='refresh'>
+	<image src="../../static/images/refresh.png"></image>
+</view>

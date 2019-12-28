@@ -1,0 +1,7 @@
+.cu-bar {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1024;
+	/* box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1); */
+}

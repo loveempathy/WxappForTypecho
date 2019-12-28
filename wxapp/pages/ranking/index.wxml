@@ -1,0 +1,41 @@
+<cu-custom tspy='{{false}}' bg="rgba(0,129,255,{{opacity}})" mClass='text-white' mStyle='box-shadow:none;' search>
+	<view slot='content'>排行</view>
+</cu-custom>
+<view class="bg-blue">
+	<view class="top">
+		<image class="_bg" id='banner' src="../../static/images/ranking_bg.png" mode="widthFix"></image>
+	</view>
+	<scroll-view id="class" scroll-x class="nav bg-blue" style="{{style}};z-index: 1024;">
+		<view class="flex text-center">
+			<view class="cu-item flex-sub" wx:for="{{class}}" wx:key bindtap="tabSelect" data-id="{{index}}" style="color:{{index==TabCur?'#FFF':'rgba(255,255,255,.5)'}}">
+				{{item}}
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<view class="list padding-sm" style="margin-top: {{style?'90':'0'}}rpx;">
+	<view wx:for='{{list}}' wx:key class="list flex align-center solid-bottom" bindtap='toInfo' data-id="{{item.cid}}">
+		<view class="_ranking flex align-center justify-center padding-right-sm">
+			<image class="_icon" mode="widthFix" src="../../static/ranking_icon/{{index+1}}.png" wx:if='{{index<3}}'></image>
+			<view class="_num round" wx:else>{{index+1}}</view>
+		</view>
+		<view class="_img radius bg-img solid line-gray" style="background-image: url('{{item.thumb[0].str_value}}');"></view>
+		<view class="flex-sub padding-left-sm flex flex-direction justify-between _content padding-tb-sm">
+			<text class="_title">{{item.title}}</text>
+			<view class="flex align-center text-xs text-grey">
+				<view class="cuIcon-time">
+					<text class="padding-left-xs">{{item.created}}天前</text>
+				</view>
+				<view class="cuIcon-message padding-left-sm">
+					<text class="padding-left-xs">{{item.commentsNum}}</text>
+				</view>
+				<view class="cuIcon-attention padding-left-sm">
+					<text class="padding-left-xs">{{item.views[0].views}}</text>
+				</view>
+				<view class="cuIcon-like padding-left-sm">
+					<text class="padding-left-xs">{{item.likes[0].likes}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

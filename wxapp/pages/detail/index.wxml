@@ -1,0 +1,10 @@
+<import src="/towxml/entry.wxml"/>
+<cu-custom mClass="bg-{{theme=='light'?'blue':'black'}} shadow-blur" isBack>
+	<view slot='content'>详情</view>
+</cu-custom>
+<view style="height: 100%;" class="bg-{{theme=='light'?'white':'black'}}" wx:if='{{article.theme}}'>
+	<template is="entry" data="{{...article}}"/>
+</view>
+<view class="round floating bg-blue shadow-blur" bindtap='theme' wx:if='{{article.theme}}'>
+	<image src="../../static/images/{{article.theme=='light'?'sun--default':'moon--current'}}.png"></image>
+</view>

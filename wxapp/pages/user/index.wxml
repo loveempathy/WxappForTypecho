@@ -1,0 +1,8 @@
+<cu-custom mClass='bg-blue shadow-blur'>
+	<view slot='content'>关于</view>
+</cu-custom>
+
+<import src="/towxml/entry.wxml" />
+<view class="padding-sm margin-sm bg-white">
+	<template is="entry" data="{{...article}}" />
+</view>

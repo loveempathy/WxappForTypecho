@@ -78,7 +78,7 @@
 
 ### 安装并设置WeTypecho插件
 
-1. 下载或clone项目:[WxappForTypecho](https://note.youdao.com/)
+1. 下载或clone项目:[WxappForTypecho](https://github.com/loveempathy/WxappForTypecho)
 2. 将WeTypecho上传至服务器站点目录/usr/plugins目录下，然后进入Typecho后台插件管理(控制台->插件)，启用WeTypecho插件，然后点设置
 ![1.png][2]
 3. 登陆[小程序管理后台](https://mp.weixin.qq.com/)点击菜单 开发->服务器域名  配置服务器域名

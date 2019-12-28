@@ -87,5 +87,5 @@
 6. 确认无误后，点击开发者工具上的上传按钮，上传代码，然后在[小程序管理后台](https://mp.weixin.qq.com/) 管理->版本管理->开发版本  提交审核即可
 
 
-  [1]: https://cdn.loveempathy.com/blog1.jpg
+  [1]: https://cdn.loveempathy.com/blog1.jpg1
   [2]: https://loveempathy.com/usr/uploads/2019/12/937410795.png
